@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/home.css') }}">
+    <title>Crop Recommendation</title>
+</head>
+<body>
+    <h1>Crop Recommendation</h1>
+    <div class="container">
+        <div class="form-container">
+            <form id="form" action="{{ url_for('predict') }}" method="POST">
+                <label for='n'><b>N</b></label><br>
+                <input type='text' name='n'><br><br>
+
+                <label for='p'><b>P</b></label><br>
+                <input type='text' name='p'><br><br>
+
+                <label for='k'><b>K</b></label><br>
+                <input type='text' name='k'><br><br>
+
+                <label for='temp'><b>Temperature</b></label><br>
+                <input type='text' name='temp'><br><br>
+
+                <label for='humidity'><b>Humidity</b></label><br>
+                <input type='text' name='humidity'><br><br>
+
+                <label for='ph'><b>pH</b></label><br>
+                <input type='text' name='ph'><br><br>
+
+                <label for='rainfall'><b>Rainfall</b></label><br>
+                <input type='text' name='rainfall'><br><br>
+
+                <input type='submit'>
+            </form>
+        </div>
+        
+    </div>
+    
+</body>
+</html>
